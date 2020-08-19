@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+      <script src="https://code.jquery.com/jquery-2.1.4.js" integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4=" crossorigin="anonymous"></script>
+	
+      <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+  
+      <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+  
+      <script>
+          $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut(100);
+          });
+      </script>
+
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/leopard@^1/dist/index.min.css"
@@ -13,6 +31,10 @@
       import project from "./index.js";
 
       project.attach("#project");
+
+      document.querySelector("#greenFlag").addEventListener("click", () => {
+        project.greenFlag();
+      });
 
       // Autoplay
       project.greenFlag();
