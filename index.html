@@ -9,6 +9,19 @@
     <body>
       <div class="content">
       <img src="https://picsum.photos/300/300/?random" />
+	      
+	          <script type="module">
+      import project from "./index.js";
+
+      project.attach("#project");
+
+      document.querySelector("#greenFlag").addEventListener("click", () => {
+        project.greenFlag();
+      });
+
+      // Autoplay
+     
+    </script>
 	       project.greenFlag();
     </div>
       <div class="loader-wrapper">
@@ -30,17 +43,6 @@
   <body>
     <div id="project"></div>
 
-    <script type="module">
-      import project from "./index.js";
 
-      project.attach("#project");
-
-      document.querySelector("#greenFlag").addEventListener("click", () => {
-        project.greenFlag();
-      });
-
-      // Autoplay
-     
-    </script>
   </body>
 </html>
